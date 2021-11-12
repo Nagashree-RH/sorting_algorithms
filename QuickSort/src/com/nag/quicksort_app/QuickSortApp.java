@@ -23,17 +23,21 @@ public class QuickSortApp {
 			switch (choice) {
 			case 1:
 				int[] arr = takeArrayInput();
-				System.out.println("Unsorted array is \n" + Arrays.toString(arr));
+				System.out.println("Unsorted array is");
+				printArray(arr);
 				QuickSort quickSort = new QuickSort();
 				quickSort.quickSort(arr, 0, arr.length - 1);
-				System.out.println("Sorted array is \n" + Arrays.toString(arr));
+				System.out.println("Sorted array is ");
+				printArray(arr);
 				break;
 			case 2:
 				int[] arr1 = takeArrayInput();
-				System.out.println("Unsorted array is \n" + Arrays.toString(arr1));
+				System.out.println("Unsorted array is ");
+				printArray(arr1);
 				HoareMethod hoare = new HoareMethod();
 				hoare.quickSort(arr1, 0, arr1.length - 1);
-				System.out.println("Sorted array is \n" + Arrays.toString(arr1));
+				System.out.println("Sorted array is ");
+				printArray(arr1);
 				break;
 			case 3:
 				sc.close();
@@ -59,6 +63,15 @@ public class QuickSortApp {
 		}
 		return arr;
 
+	}
+	
+	private static void printArray(int[] array) 
+	{
+		for(int i =0; i<array.length; i++)
+		{
+			System.out.print(array[i]+" ");
+		}
+		System.out.println();
 	}
 
 }
