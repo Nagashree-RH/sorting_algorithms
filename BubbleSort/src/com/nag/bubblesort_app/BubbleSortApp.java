@@ -17,16 +17,17 @@ public class BubbleSortApp{
 		printArray(givenArray);
 		
 		BubbleSort bubbleSort = new BubbleSort();
-		//Descending
-		int[] sortedArray = bubbleSort.bubbleSortDescending(givenArray);
-		System.out.println("Sorted array is : Descending");
-		printArray(sortedArray);
+		
+		//To get decending order uncomment below code
+//      bubbleSort.bubbleSortDescending(givenArray);
+//		System.out.println("Sorted array is : Descending");
+//		printArray(sortedArray);
 		
 		//Ascending
-		int[] sortedArrayAscending = bubbleSort.bubbleSort(givenArray);
+		bubbleSort.bubbleSort(givenArray);
 		System.out.println("Sorted array is : Ascending");
-		printArray(sortedArrayAscending);
-
+		printArray(givenArray);
+ 
 	}
  
 	
