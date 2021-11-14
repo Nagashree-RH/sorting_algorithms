@@ -1,36 +1,38 @@
-package com.nag.bubblesort_app;
+package com.nag.insertionsortapp;
 
 import java.util.Scanner;
 
-import com.nag.bubblesort.BubbleSort;
+import com.nag.insertionsort.InsertionSort;
 
-public class BubbleSortApp {
+public class InsertionSortApp {
 
 	private static Scanner sc;
 
 	public static void main(String[] args) {
+
 		sc = new Scanner(System.in);
 
-		int[] givenArray = takeInput();
+		// take array input
+		int[] arr = takeArrayInput();
 
-		System.out.println("Given array");
-		printArray(givenArray);
+		System.out.println("Given array :");
+		printArray(arr);
 
-		BubbleSort bubbleSort = new BubbleSort();
+		InsertionSort insertionSort = new InsertionSort();
 
-		// To get decending order uncomment below code
-//      bubbleSort.bubbleSortDescending(givenArray);
-//		System.out.println("Sorted array is : Descending");
-//		printArray(sortedArray);
+		// for ascending order
+		insertionSort.insertionSortMethod(arr);
 
-		// Ascending
-		bubbleSort.bubbleSort(givenArray);
-		System.out.println("Sorted array is : Ascending");
-		printArray(givenArray);
+		// for descending order
+//		insertionSort.insertionSortMethodDescending(arr);
 
+		System.out.println("Array in sorted order is :");
+		printArray(arr);
+
+		sc.close();
 	}
 
-	private static int[] takeInput() {
+	private static int[] takeArrayInput() {
 		System.out.println("Enter the size of the array");
 		int size = sc.nextInt();
 		int[] array = new int[size];
@@ -49,5 +51,4 @@ public class BubbleSortApp {
 		}
 		System.out.println();
 	}
-
 }

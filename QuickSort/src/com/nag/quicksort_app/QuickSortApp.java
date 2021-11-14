@@ -1,6 +1,5 @@
 package com.nag.quicksort_app;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import com.nag.quicksort.HoareMethod;
@@ -64,12 +63,10 @@ public class QuickSortApp {
 		return arr;
 
 	}
-	
-	private static void printArray(int[] array) 
-	{
-		for(int i =0; i<array.length; i++)
-		{
-			System.out.print(array[i]+" ");
+
+	private static void printArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
 		}
 		System.out.println();
 	}
